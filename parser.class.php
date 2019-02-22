@@ -18,7 +18,7 @@ class parser
         $beuty = preg_replace('/ => /', ':', $beuty);
         $beuty = (explode(" ", $beuty));
         $i = 0;
-        while (strpos($beuty[$i], $get) === false) {
+        while (strpos($beuty[$i], $get) === false && $i< count($beuty)) {
             $i++;
         }
         return explode(':',$beuty[$i])[1];
